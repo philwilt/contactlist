@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       ContactsMailer.welcome(@contact).deliver_later
-      flash[:success] = "You have been added to my contacts!"
+      flash[:success] = 'You have been added to my contacts!'
       redirect_to root_url
     else
       render :new
