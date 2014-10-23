@@ -1,0 +1,19 @@
+Documentation:
+  Enabled: false
+LineLength:
+  Max: 120
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+AllCops:
+  RunRailsCops: true
+  Include:
+    - Gemfile
+    - lib/tasks/*
+  Exclude:
+    - db/schema.rb
+    - vendor/**/*
+    - bin/**/*
+    - config/initializers/**/*
+    - db/migrate/*devise*.rb
