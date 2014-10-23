@@ -93,7 +93,7 @@ The real magic happening here in Rails 4.2 is the line:
 ```
 ContactsMailer.welcome(@contact).deliver_later
 ```
-This is what allows us to create an Active Job and send it to a Sucker Punch queue. In fact, we don't even have to setup logging like before as it Active Jobs will log by default. Pretty nice abstraction, ain't it? Of course, this won't work without a mailer, so let's set that up.
+This is what allows us to create an Active Job and send it to a Sucker Punch queue. In fact, we don't even have to setup logging like before as Active Jobs will log by default. Pretty nice abstraction, ain't it? Of course, this won't work without a mailer, so let's set that up.
 
 ## Setup a Mailer
 
