@@ -1,0 +1,21 @@
+<% if @contact.errors.any? %>
+  <div class='errors'>
+      <ul>
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @contact do |f| %>
+  <%= f.label :name, 'Name' %>
+  <br />
+  <%= f.text_field :name, { placeholder: "Jon Stewart" } %>
+  <br />
+  <%= f.label :email, 'Email' %>
+  <br />
+  <%= f.text_field :email, { placeholder: "example@email.com" } %>
+  <br />
+  <%= f.submit "Sign Up" %>
+<% end %>
